@@ -52,7 +52,7 @@ page 50100 StudentApplicationFormListPage
         }
         area(FactBoxes)
         {
-            part(StudentApplicationList; "StudentApplicationFormListPage")
+            part(StudentApplicationList; StudentApplicationFormListPage)
             {
                 ApplicationArea = All;
                 SubPageLink = ApplicationID = field(ApplicationID);
