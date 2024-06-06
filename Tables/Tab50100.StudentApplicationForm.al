@@ -200,12 +200,10 @@ table 50100 StudentApplicationForm
             Caption = 'How You Learnt About The University';
             OptionMembers = Radio,Television,Newspapers,"Friends/Referral",Exhibition,Teacher,Prospectus,"University Website","Social Media";
         }
-        field(40; EnrollmentStatus; Option)
+        field(40; EnrollmentStatus; Enum ApplicationStatusEnum)
         {
             DataClassification = ToBeClassified;
             Caption = 'Enrollment Status';
-            OptionMembers = Pending,Enrolled,"Not Enrolled";
-            InitValue = Pending;
         }
     }
     keys
