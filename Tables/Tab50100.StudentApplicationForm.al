@@ -98,6 +98,12 @@ table 50100 StudentApplicationForm
         field(16; "Phone Number"; Code[20])
         {
             Caption = 'Phone Number';
+            trigger OnValidate()
+            var
+                Validations: Codeunit MyPublishers;
+            begin
+                Validations.OnPhoneNumberChanged(Rec."Phone Number");
+            end;
         }
         field(17; "Name of Father"; Text[50])
         {
