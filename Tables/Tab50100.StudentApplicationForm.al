@@ -132,6 +132,12 @@ table 50100 StudentApplicationForm
         field(22; "Mother's Phone Number"; Code[20])
         {
             Caption = 'Mother''s Phone Number';
+            trigger OnValidate()
+            var
+                ValidateSthng: Codeunit MyPublishers;
+            begin
+                ValidateSthng.OnPhoneNumberChanged(Rec."Mother's Phone Number");
+            end;
         }
         field(23; "Mother's Occupation"; Text[50])
         {

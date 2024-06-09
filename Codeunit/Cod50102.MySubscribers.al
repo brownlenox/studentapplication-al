@@ -9,6 +9,8 @@ codeunit 50102 MySubscribers
             Error(ErrorMessage);
     end;
 
+
+
     local procedure IsValidPhoneNumber(PhoneNumber: Code[20]): Boolean
     var
         i: Integer;
@@ -16,12 +18,16 @@ codeunit 50102 MySubscribers
         // Check if the first character is '+'
         if PhoneNumber[1] <> '+' then
             exit(false);
+        // THEfirst [1], 1
 
         // Check if the rest of the characters are digits
         for i := 2 to StrLen(PhoneNumber) do begin
             if not (PhoneNumber[i] in ['0' .. '9']) then
                 exit(false);
         end;
+
+        if StrLen(PhoneNumber[i]) <> 13 then
+            exit(false);
 
         // If all checks pass, the phone number is valid
         exit(true);
